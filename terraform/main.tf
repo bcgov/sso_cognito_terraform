@@ -44,4 +44,8 @@ resource "aws_cognito_user_pool_client" "client1" {
   allowed_oauth_flows                  = ["code"]
   allowed_oauth_scopes                 = ["openid", "email", "profile"]
   explicit_auth_flows                  = ["ALLOW_CUSTOM_AUTH", "ALLOW_USER_SRP_AUTH", "ALLOW_REFRESH_TOKEN_AUTH"]
+
+  depends_on = [
+    aws_cognito_identity_provider.idp1,
+  ]
 }
