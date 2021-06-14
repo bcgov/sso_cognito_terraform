@@ -1,0 +1,10 @@
+module "app-client-${env}" {
+  source       = "../modules/user-pool-client"
+  user_pool_id = var.${env}_user_pool_id
+
+  name                         = "${client}"
+  supported_identity_providers = []
+
+  callback_urls = []
+  logout_urls   = []
+}
