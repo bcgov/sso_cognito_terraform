@@ -1,4 +1,4 @@
-# see https://registry.terraform.io/providers/mrparkers/keycloak/latest/docs/resources/openid_client
+# see https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cognito_user_pool_client
 resource "aws_cognito_user_pool_client" "this" {
   name = var.name
 
